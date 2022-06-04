@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {  Card, Dropdown, DropdownButton, Table } from 'react-bootstrap';
 import * as attendanceService from '../../services/attendanceService';
-import debug from 'sabio-debug';
+import debug from 'debug';
 import toastr from '../../utils/toastr.js';
 import NavCard from '../host/NavCard';
-
 import './hostattendancepage.css'
 
 
@@ -29,9 +28,6 @@ const AttendanceDropdown = () => {
     });
 
 
-   
-
-
     const handleShow = (e) => {
         setShow(true); 
         
@@ -49,45 +45,45 @@ const AttendanceDropdown = () => {
         const isChecked = e.target.checked;
         const input = e.target.type;
         
-        setPageData((prevState) => {
-            const pd = { ...prevState }; 
-            const newUsers = [...pd.user]; 
+    setPageData((prevState) => {
+        const pd = { ...prevState }; 
+        const newUsers = [...pd.user]; 
         
-            for (let i = 0; i < newUsers.length; i++) {
-                const element = newUsers[i];
+      for (let i = 0; i < newUsers.length; i++) {
+        const element = newUsers[i];
                 
-                if(currentTarget === element.id){
-                    newUsers[i]= {...element, isPresent: !element.isPresent};
-                    updateUser = newUsers[i]
-                }
-            }
+      if(currentTarget === element.id){
+          newUsers[i]= {...element, isPresent: !element.isPresent};
+           updateUser = newUsers[i]
+       }
+   }
             
-            if (input === "checkbox" && isChecked === true){
+      if (input === "checkbox" && isChecked === true){
                 
-                setPageData((prevState)=> {
-                   const pd= {...prevState};
-                   pd.checkedBox = true;
-                   pd.startCounter +=1;
-                   return pd;
-                   });
-           }
-           else {
-                 setPageData((prevState)=> {
-                   const pd= {...prevState};
+    setPageData((prevState)=> {
+      const pd= {...prevState};
+       pd.checkedBox = true;
+       pd.startCounter +=1;
+       return pd;
+       });
+  }
+       else {
+        setPageData((prevState)=> {
+          const pd= {...prevState};
                 
-            if (pd.startCounter !== 0) {
-                   pd.startCounter -= 1;
-                   return pd;
-                }    
-                  });
-           }
-            attendanceService.update(updateUser).then(updateSuccessful); 
-            pd.userComponents = newUsers.map(mapUserItems);
-            pd.user = newUsers;
-            return pd;
+    if (pd.startCounter !== 0) {
+         pd.startCounter -= 1;
+         return pd;
+         }    
+       });
+    }
+   attendanceService.update(updateUser).then(updateSuccessful); 
+     pd.userComponents = newUsers.map(mapUserItems);
+      pd.user = newUsers;
+      return pd;
 
-        });
-    };
+ });
+};
 
     const updateSuccessful = (user) => {
         toastr.success(`${user.firstName} ${user.lastName} is marked ${user.isPresent? "Present":"Absent"}`)
@@ -107,23 +103,23 @@ const AttendanceDropdown = () => {
     
     if(sessiontag)
     {
-                 pd.sessions= `${workshopName} ${sessiontag}`;
+       pd.sessions= `${workshopName} ${sessiontag}`;
           
     }
-            let counter = 0;
+       let counter = 0;
 
     user.forEach(checked => {
 
      if (checked.isPresent)
      {
-             counter++;
+         counter++;
      }
                
       });
 
-                 pd.startCounter = counter;
+         pd.startCounter = counter;
 
-           return pd;
+     return pd;
       });
    };
 
@@ -151,8 +147,7 @@ const AttendanceDropdown = () => {
      return (
          <Dropdown.Item href="#" name={item.sessionId} key={item.id} onClick={handleShow} >
                 {item.name}
-              
-            </Dropdown.Item>
+             </Dropdown.Item>
         );
     };
 
