@@ -1,3 +1,5 @@
 # Relevent-Work
 
-Hello there! Sneak peek of a project I have been working on which is my most relevent work. 
+Hello there! 
+I currently have pieces of my projects under my most relevant work.
+Check out my LinkedIn Profile http://linkedIn.com/in/lesley-falcon
