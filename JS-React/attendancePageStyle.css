@@ -1,100 +1,112 @@
-#attendees  {
+#attendees 
+{
    font-size:12px;
    color:black;
    margin-left:80px;
    font-family:sans-serif;
-  }
+}
 
-.row{
+.row
+{
     display:flex;
     margin:10px;
 }
 
-#infoContent.column{
+#infoContent.column
+{
     float:left;
     width:20%;
 }
 
-.column#usersDisplay{
+.column#usersDisplay
+{
     float:right;
     width:80%;
 }
 
-#attendees > span {
+#attendees > span 
+{
     margin:15px;
 }
 
-#attendees > .card{
+#attendees > .card
+{
     width:95%;
 }
 
-span .account-user-avatar{
+span .account-user-avatar
+{
     justify-content: center;
 }
 
-#tableOfUsers.card-body{
+#tableOfUsers.card-body
+{
     Width:100%;
 }
-#tableOfUsers > h4{
+#tableOfUsers > h4
+{
    font-size: 22px;
    padding:10px;
    color:rgb(10, 10, 10);
 }
 
-
-
-#infoContent > .Counter{
+#infoContent > .Counter
+{
     margin-left:10%;
     margin-top:60px;
     padding:10px;
     color:rgb(89, 88, 88);
 }
 
-#infoContent >.dropdown{
+#infoContent >.dropdown
+{
     margin-left:12%;
 }
 
-.btn.dropdown-toggle{
+.btn.dropdown-toggle
+{
  background-color:#8b7eca6e;
  border-color:#b2abd76e;
-    box-shadow: 0 1px 6px 0 rgba(184, 157, 247, 0.5)  ;
+ box-shadow: 0 1px 6px 0 rgba(184, 157, 247, 0.5)  ;
 }
 
-#intro-Attendance-Form {
+#intro-Attendance-Form 
+{
     margin-left:5%;
     margin-right:6%;
 }
 
-#intro-Attendance-Form h2{
-
-    padding: 15px;
+#intro-Attendance-Form h2
+{
+padding: 15px;
 }
 
-
-.navCardStyle.pb-3.card{
-    
+.navCardStyle.pb-3.card
+{
  display:flex;
  color:white;
  background-color:#8b7eca6e;
  margin-top:5%;
  box-shadow:none;
-padding:8px;
-border-color:#8b7eca6e;
-align-items:center;
+ padding:8px;
+ border-color:#8b7eca6e;
+ align-items:center;
 }
 
-div.text-center{
+div.text-center
+{
     display:flex;
     margin:10px;
     text-align:center;
 }
 
-.navCardButt {
+.navCardButt 
+{
     margin:5px;
     text-transform:none;
     color:white ;
     font-size: 15px;
-   background-color: transparent;
+    background-color: transparent;
     border-radius: 0px;
     transition-duration: 0.8s ease-in-out;
 }
@@ -104,13 +116,13 @@ div.text-center{
 }
 
 button.navCardButt :hover{
- 
     padding:5px;
     background-color:transparent;
-   color: white;
+    color: white;
     padding:12px;
 }
- .page-title-box .page-title{
+
+.page-title-box .page-title{
     font-size:25px;
     color:rgba(109, 108, 108, 0.625);
 }
