@@ -1,5 +1,6 @@
 # Relevent-Work
 
-Hello there! 
-I currently have pieces of my projects under my most relevant work.
-Check out my LinkedIn Profile http://linkedIn.com/in/lesley-falcon
+Hello there, nice to meet you!
+I am a Full-Stack Software Engineer with a passion for building creative and responsive digital experiences.
+I currently have various folders above demonstrating some of my contributions from my last project and some similar work.
+Thanks for stopping by, Check out my LinkedIn Profile http://linkedIn.com/in/lesley-falcon
